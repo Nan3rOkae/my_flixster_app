@@ -1,12 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <h1>Flixster</h1>
+    <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
-    
+    <form>
+        <label for="Movies">Search for a movie:</label>
+        <input type="text" name="movie" placeholder="Shrek" />
+        <button id='clicker'>search</button>
+      </form>
+
+      <div id="movieImage" > </div>
+      <button class= "hidden" id="loader" >Load more</button>  
+      <script src="Script.js"></script>
 </body>
 </html>

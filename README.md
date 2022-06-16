@@ -2,7 +2,7 @@
 
 ## Week 1 Assignment: Flixster
 
-Submitted by: **NAME**
+Submitted by: **Nana Kofi Okae**
 
 Estimated time spent: **#** hours spent in total
 
