@@ -1,44 +1,42 @@
 let movieForm = document.querySelector("form");
 const APIkey = "279dae4d4960c401eee77e685379317a";
-const limit = 25;
-var searchkey = " "
-var offset = 0;
-var page = 0;
+var page = 1;
 const image = "https://image.tmdb.org/t/p/w600_and_h900_bestv2"
+let searchedMovie = false;
+let searchkey;
 
-const generateError = (err) => {
-    document.lastChild.innerHTML += `
-        <span style="color: red;">${err} not found</span>
-    `;
-}
+    const generateError = (err) => {
+        document.lastChild.innerHTML += `
+            <span style="color: red;">${err} not found</span>`;
+    }
 
-movieForm.addEventListener("submit", async (evt) => {
-    // this prevents the page from re-loading
+document.addEventListener("submit", async (evt) => {
+// prevents broswer from using default funtion
     evt.preventDefault();
+    searchedMovie = true;
  
-
-  
-    // logs for debugging, open the inspector!
-    console.log("evt.target.movie.value = ", evt.target.movie.value);
+    // searchkey variable used to get data info from json
     searchkey = evt.target.movie.value;
+    page = 1
 
-    let apiUrl = 'https://api.themoviedb.org/3/search/movie?api_key=' + APIkey + '&query=' + searchkey;
+    // api url that has the link to search the data base 
+    let apiUrl = 'https://api.themoviedb.org/3/search/movie?api_key=' + APIkey + '&query=' + searchkey + '&page=' + page;
+
     console.log(apiUrl);
 
     MovieImage = document.querySelector("#movieImage")
     
-    // try catch to handle unexpected api errors
+   // awaits the data to be used and calls display funtion to display movie data 
     try {
-        movieImage.innerHTML = "";
+
+        movieImage.innerHTML = " ";
+
         let response = await fetch(apiUrl);
 
-        // now call is made, but data still not arrived
         console.log("response is: ", response);
 
         let responseData = await response.json();
 
-
-        // now have actual data
         console.log("responseData is: ", responseData);
 
        displayResults(responseData);
@@ -46,54 +44,146 @@ movieForm.addEventListener("submit", async (evt) => {
     } catch (e) {
         generateError(evt.target.movie.value);
     }
+
     let loadmoreMovies = document.querySelector("#loader");
     loadmoreMovies.classList.remove("hidden");
+    searchedMovie = true;
 });
 
-
-// in order to have the 
 function displayResults(responseData){
-    responseData.results.forEach(element => {
-        console.log(element)
-        MovieImage.innerHTML += `<img src="${image+element.poster_path}" alt="${element.title}" width = "100" height= "100"/>`; 
-    })
 
+    responseData.results.forEach(element => {
+     
+        MovieImage.innerHTML += `
+        <div class='MovieCard'>
+        <img src="${image+element.poster_path}/>
+        <p>${element.title}</p>
+        <p>${element.vote_average}</p>
+        </div>`;
+    })
 }
 
-let loadmoreMovies = document.querySelector("#loader");
 
-// when clicked, prevent page from reloading, then increment clicked.
-// change offset to when clicked times limit
-loadmoreMovies.addEventListener("click", async (evt) => {
+document.addEventListener("DOMContentLoaded", loadNowPlaying);
 
-    let apiUrl = `https://api.themoviedb.org/3/search/movie?api_key=${APIkey}&query=${searchkey}&page=${pages}`
-    console.log(apiUrl);
-   
-    movieImage = document.querySelector("#movieImage")
+async function loadNowPlaying() {
+    searchedMovie = false;
+
+   let apiUrlCurrent = `https://api.themoviedb.org/3/movie/now_playing?api_key=${APIkey}&language=en-US&page=${page}`
+    console.log("test")
+    MovieImage = document.querySelector("#movieImage")
     
+    // try catch to handle unexpected api errors
+    try {
+        
+        movieImage.innerHTML = " ";
+        let response = await fetch(apiUrlCurrent);
+
+        console.log("response is: ", response);
+
+        let responseData = await response.json();
+
+        console.log("responseData is: ", responseData);
+
+       displayResults(responseData);
+      
+    } catch (e) {
+
+        generateError(evt.target.movie.value);
+    }
+
+    let loadmoreMovies = document.querySelector("#loader");
+    loadmoreMovies.classList.remove("hidden");
+}
+
+function displayResults(responseData){
+
+    responseData.results.forEach(element => {
+      
+        MovieImage.innerHTML += `
+        <div class='MovieCard'>
+        <img src="${image+element.poster_path}" width = "320" height= "400"/>
+        <p>${element.title}</p>
+        <p>${element.vote_average}</p>
+        </div>`;
+    })
+};
+
+let loadMoreMovies = document.querySelector("#load-more-movies-btn");
+
+loadMoreMovies.addEventListener("click", async (evt) => {
+
+    console.log("loading more")
+
     evt.preventDefault();
-clicked += 1;
-offset = clicked*limit;
+    page++
+    console.log(page)
+    console.log(MovieImage)
 
-  // logs for debugging, open the inspector!
+    if (searchedMovie == true){
+    
+        let apiUrl = 'https://api.themoviedb.org/3/search/movie?api_key=' + APIkey + '&query=' + searchkey + '&page=' + page;
+        console.log(apiUrl);
+    
+        MovieImage = document.querySelector("#movieImage")
+        
+        try {
 
- 
- // try catch to handle unexpected api errors
- try {
-     let response = await fetch(apiUrl);
+            let response = await fetch(apiUrl);
+    
 
-     // now call is made, but data still not arrived
-     console.log("response is: ", response);
+            console.log("response is: ", response);
+    
+            let responseData = await response.json();
+    
+    
+            console.log("responseData is: ", responseData);
+    
+           displayResults(responseData);
+          
+        } catch (e) {
+            generateError(evt.target.movie.value);
+        }
+        let loadmoreMovies = document.querySelector("##load-more-movies-btn");
+        loadmoreMovies.classList.remove("hidden");
+        return 0
+    }
+    if(searchedMovie == false){
+        let apiurlLoad = `https://api.themoviedb.org/3/movie/now_playing?api_key=${APIkey}&language=en-US&page=${page}`
+        console.log(apiurlLoad);
+    
+        MovieImage = document.querySelector("#movieImage")
+        
+        try {
 
-     let responseData = await response.json();
+            let response = await fetch(apiUrl);
+    
 
+            console.log("response is: ", response);
+    
+            let responseData = await response.json();
+    
+    
+            console.log("responseData is: ", responseData);
+    
+           displayResults(responseData);
+          
+        } catch (e) {
+            generateError(evt.target.movie.value);
+            console.log(generateError)
+        }
+        let loadmoreMovies = document.querySelector("#loader");
+        loadmoreMovies.classList.remove("hidden");
+        return 0
+    }
 
-     // now have actual data
-     console.log("responseData is: ", responseData);
-
-    displayResults(responseData);
-   
- } catch (e) {
-     generateError(evt.target.movie.value);
- }
 });
+
+
+
+
+
+
+
+
+

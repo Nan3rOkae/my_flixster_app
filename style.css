@@ -1,4 +1,64 @@
-.displayResults{
-    padding: 100;
-    size: 100;
+ body{
+    position: absolute;
+    width: 1920px;
+    height: 1067px;
+    left: 0px;
+    top: 0px;
+    background: #14591D;   
+}
+#home{
+    position: absolute;
+    width: 279px;
+    height: 73px;
+    font-family: Fantasy;
+    font-style: Copperplate;
+    font-weight: 400;
+    font-size: 60px;
+    color: #000000;
+}
+#search-input {
+
+    position: absolute;
+    width: 628px;
+    height: 44px;
+    left: 873px;
+    top: 22px;
+    background: #1A7BEE;
+    border-radius: 14px;
+    background: #ffffff;
+    border-radius: 14px;
+    }
+#movieImage{
+margin-top: 100px;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+}
+img{
+    width: 300px;
+    height: 400px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+p {
+    max-width: 150px;
+    color: #ACD2ED;
+    padding-left: 20px;
+    font-style: Fantasy;
+}
+#button{
+    position: absolute;
+    width: 229px;
+    height: 44px;
+    left: 1510px;
+    top: 22px;
+    background: #1aeeb5;
+    border-radius: 14px;
+}
+#home-image{
+    width: 500px;
+    height: 200px;
+    background-color: green;
+    object-fit: none;
+    object-position: center top;
 }

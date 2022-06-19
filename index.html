@@ -1,20 +1,35 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
-    <h1>Flixster</h1>
+<title>Flixster</title>
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+
 </head>
+
 <body>
-    <form>
-        <label for="Movies">Search for a movie:</label>
-        <input type="text" name="movie" placeholder="Shrek" />
-        <button id='clicker'>search</button>
+<a id = 'home' href="/">FLIXSTER</a>
+
+   
+    <form id = "movies">
+        
+        <input type="text" name="movie" id="search-input" placeholder="search" />
+
+        <button id="button">search</button>
+
       </form>
 
-      <div id="movieImage" > </div>
-      <button class= "hidden" id="loader" >Load more</button>  
+      <div id="movieImage"> </div>         
+
+      <button class= "loader" id="load-more-movies-btn" >Load more</button>  
+
       <script src="Script.js"></script>
+
+    
+
 </body>
+
 </html>
