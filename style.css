@@ -1,11 +1,9 @@
- body{
-    position: absolute;
-    width: 1920px;
-    height: 1067px;
-    left: 0px;
-    top: 0px;
-    background: #14591D;   
+body{
+    max-width: 100%;
+    overflow-x: hidden;
+    background: #0e4715;  
 }
+
 #home{
     position: absolute;
     width: 279px;
@@ -14,51 +12,77 @@
     font-style: Copperplate;
     font-weight: 400;
     font-size: 60px;
-    color: #000000;
+    color: #243f71;
 }
-#search-input {
 
+#search-input {
     position: absolute;
-    width: 628px;
+    width: 25%;
     height: 44px;
-    left: 873px;
+    left: 39%;
     top: 22px;
     background: #1A7BEE;
     border-radius: 14px;
     background: #ffffff;
     border-radius: 14px;
     }
+
 #movieImage{
-margin-top: 100px;
+    margin-top: 100px;
     display: flex;
     flex-flow: wrap;
     justify-content: center;
 }
+
 img{
     width: 300px;
     height: 400px;
     padding-left: 20px;
     padding-right: 20px;
 }
+
 p {
     max-width: 150px;
     color: #ACD2ED;
     padding-left: 20px;
-    font-style: Fantasy;
+    font-family: Fantasy;
+    font-style: Copperplate;
 }
+
 #button{
+    z-index: 10;
     position: absolute;
     width: 229px;
     height: 44px;
-    left: 1510px;
-    top: 22px;
-    background: #1aeeb5;
+    left: 1009px;
+    top: 27px;
+    background: #237660;
     border-radius: 14px;
 }
+
 #home-image{
     width: 500px;
     height: 200px;
     background-color: green;
     object-fit: none;
     object-position: center top;
+}
+
+#load-more-movies-btn{
+    position: fixed;
+    width: 380px;
+    height: 44px;
+    left: 39%;
+    border-radius: 14px;
+    bottom: 1%;
+    background-color: #237660;
+}
+
+form {
+    position: center;
+    width: 2207px;
+    height: 90px;
+    left: -157px;
+    top: -110px;
+    background: #095a2b;
 }
