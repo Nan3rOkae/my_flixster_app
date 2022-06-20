@@ -41,10 +41,8 @@ Deployed Application (optional): [Flixster Deployed Site](ADD_LINK_HERE)
 - [ ] Implement anything else that you can get done to improve the app functionality!
 
 ### Walkthrough Video
+file:///C:/Users/nanao/Downloads/gify%20project%201.webm
 
-`TODO://` Add the embedded URL code to your animated app walkthrough below, `ADD_EMBEDDED_CODE_HERE`. Make sure the video or gif actually renders and animates when viewing this README. (🚫 Remove this paragraph after adding walkthrough video)
-
-<div style="width:360px;max-width:100%;"><div style="height:0;padding-bottom:66.67%;position:relative;"><iframe width="360" height="240" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameBorder="0" src="https://imgflip.com/embed/6k8d71"></iframe></div><p><a href="https://imgflip.com/gif/6k8d71">via Imgflip</a></p></div>
 
 ### Reflection
 
