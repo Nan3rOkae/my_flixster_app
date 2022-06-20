@@ -4,7 +4,7 @@
 
 Submitted by: **Nana Kofi Okae**
 
-Estimated time spent: **#** hours spent in total
+Estimated time spent: **16** hours spent in total
 
 Deployed Application (optional): [Flixster Deployed Site](ADD_LINK_HERE)
 
@@ -48,13 +48,13 @@ Deployed Application (optional): [Flixster Deployed Site](ADD_LINK_HERE)
 
 ### Reflection
 
-* Did the topics discussed in your labs prepare you to complete the assignment? Be specific, which features in your weekly assignment did you feel unprepared to complete? The lectures really helped me grasp the understanding of what was needed to be done. Lab 3 was a very huge help in making the project what it is, with calling api's and 
+* Did the topics discussed in your labs prepare you to complete the assignment? Be specific, which features in your weekly assignment did you feel unprepared to complete?
 
-Add your response here
+- The lectures really helped me grasp the understanding of what was needed to be done. Lab 3 was a very huge help in making the project what it is, with calling api's and 
 
 * If you had more time, what would you have done differently? Would you have added additional features? Changed the way your project responded to a particular event, etc.
   
-Add your response here
+- I would have liked to make the style of the webpage alot more bubblier and nicer. I would have also liked to add a scroll feature to see the popular movies on the top of the webpage
 
 * Reflect on your project demo, what went well? Were there things that maybe didn't go as planned? Did you notice something that your peer did that you would like to try next time?
 
@@ -62,8 +62,7 @@ Add your response here
 
 ### Open-source libraries used
 
-- Add any links to open-source libraries used in your project.
+- https://www.themoviedb.org/
 
 ### Shout out
-
-Give a shout out to somebody from your cohort that especially helped you during your project. This can be a fellow peer, instructor, TA, mentor, etc.
+The homies Enrique, Paul,Lucas, and Amar
