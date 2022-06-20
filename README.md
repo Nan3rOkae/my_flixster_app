@@ -1,4 +1,3 @@
-📝 `NOTE` Use this template to initialize the contents of a README.md file for your application. As you work on your assignment over the course of the week, update the required or stretch features lists to indicate which features you have completed by changing `[ ]` to `[x]`. (🚫 Remove this paragraph before submitting your assignment.)
 
 ## Week 1 Assignment: Flixster
 
@@ -6,7 +5,7 @@ Submitted by: **Nana Kofi Okae**
 
 Estimated time spent: **12** hours spent in total
 
-Deployed Application (optional): [Flixster Deployed Site](ADD_LINK_HERE)
+[[Flixster Deployed Site](ADD_LINK_HERE)](http://127.0.0.1:5500/)
 
 ### Application Features
 
@@ -41,7 +40,7 @@ Deployed Application (optional): [Flixster Deployed Site](ADD_LINK_HERE)
 - [ ] Implement anything else that you can get done to improve the app functionality!
 
 ### Walkthrough Video
-file:///C:/Users/nanao/Downloads/gify%20project%201.webm
+______________________________________________________________
 
 
 ### Reflection
@@ -56,7 +55,7 @@ file:///C:/Users/nanao/Downloads/gify%20project%201.webm
 
 * Reflect on your project demo, what went well? Were there things that maybe didn't go as planned? Did you notice something that your peer did that you would like to try next time?
 
-Add your response here
+Add your response here________________________________________________________________________________________________________________________
 
 ### Open-source libraries used
 
