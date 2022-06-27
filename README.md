@@ -39,7 +39,8 @@ Estimated time spent: **12** hours spent in total
 - [ ] Allow movie video trailers to be played using [embedded YouTube](https://support.google.com/youtube/answer/171780?hl=en)
 - [ ] Implement anything else that you can get done to improve the app functionality!
 
-### Walkthrough Video
+### Walkthrough Video![movie gif](https://user-images.githubusercontent.com/89530363/175997064-c6d4db0f-8ace-42ca-ad86-b2842aab8630.gif)
+
 ______________________________________________________________
 
 
