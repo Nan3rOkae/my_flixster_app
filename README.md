@@ -63,4 +63,4 @@ Add your response here__________________________________________________________
 - https://www.themoviedb.org/
 
 ### Shout out
-The homies Enrique, Paul, Lucas, and Amar
+Enrique, Paul, Lucas, and Amar
